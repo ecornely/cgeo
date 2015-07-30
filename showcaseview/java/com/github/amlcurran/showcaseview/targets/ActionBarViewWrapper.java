@@ -29,8 +29,8 @@ import java.lang.reflect.Field;
 class ActionBarViewWrapper {
 
     private ViewParent mActionBarView;
-    private Class mActionBarViewClass;
-    private Class mAbsActionBarViewClass;
+    private Class<?> mActionBarViewClass;
+    private Class<?> mAbsActionBarViewClass;
 
     public ActionBarViewWrapper(ViewParent actionBarView) {
         if (!actionBarView.getClass().getName().contains("ActionBarView")) {

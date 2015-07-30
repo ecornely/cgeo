@@ -36,7 +36,7 @@ class ReflectorFactory {
     }
 
     private static Reflector.ActionBarType searchForActivitySuperClass(Activity activity) {
-        Class currentLevel = activity.getClass();
+        Class<?> currentLevel = activity.getClass();
         while (currentLevel != Activity.class) {
             if (currentLevel.getSimpleName().equals("SherlockActivity") || currentLevel.getSimpleName().equals("SherlockFragmentActivity")) {
                 return Reflector.ActionBarType.ACTIONBAR_SHERLOCK;
